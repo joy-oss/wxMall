@@ -1,0 +1,140 @@
+.cartNav{
+  width:100%;
+  text-align:center;
+  border-bottom:solid 2px #F7F7F7;
+  padding-bottom:10px;
+}
+.locationRow{
+  height:60px;
+}
+.defLocation{
+  position: relative;
+}
+.editAddr{
+  position: absolute;
+  right:10px;
+  top:15px;
+  border-left: 1px solid black;
+  padding-left:10px;
+  font-size: 15px;
+}
+.defLocation image{
+width: 20px;
+height: 20px;
+}
+.showDefault{
+  padding:15px;
+  display: flex;
+  font-size:14px;
+}
+.def{
+  max-width: 200px;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cartList{
+border-top:solid 15px #F2F2F2;
+padding:10px;
+}
+.goodsCon{
+  display: flex;
+}
+.goodsCon image{
+width: 80px;
+height:80px;
+margin-right:10px;
+}
+.sku{
+  display: flex;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  padding:3px 5px;
+  font-size: 15px;
+}
+.sku>view{
+  margin-right:10px;
+}
+.cartname{
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+  font-size:20px;
+}
+.goodsInfo{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.goodsInfo>view{
+margin-bottom: 5px;
+width:150px;
+}
+.goodsInfo>view:nth-of-type(1){
+  margin-top:-15px;
+}
+.priceRow,.countall{
+position: relative;
+}
+.priceRow>view:nth-of-type(1){
+color:#E42B0E;
+font-weight: bold;
+font-size: 17px;
+}
+.counter{
+  position: absolute;
+  right:0;
+  top:0;
+  display:flex;
+}
+.counter>view:nth-of-type(2){
+  padding:0 10px;
+  background-color: #F2F2F2;
+}
+.radio{
+  margin-top:30px;
+}
+.countall{
+  position: fixed;
+  bottom:0;
+  left:10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height:46px;
+  width: 100%;
+
+  /* background-color: #F2F2F2; */
+}
+.account{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:flex-end;
+  align-items: center;
+}
+.account>view:nth-of-type(1){
+  margin-right:10px;
+}
+.accountbtn{
+  padding:5px 10px;
+  background-color: #E42B0E;
+  color:#FDE5E3;
+  border-radius: 15px;
+  font-size:14px;
+}
+.delcart{
+  margin-top:5px;
+  margin-left:110px;
+  font-size:14px;
+}
+checkbox .wx-checkbox-input{
+border-radius:50%;
+}
+

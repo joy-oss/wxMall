@@ -1,0 +1,46 @@
+<view class='addrRow'>
+  <view>
+    收货人
+  </view>
+  <view>
+    <input class="weui-input" name="input" 	bindblur='getuname' value="{{name}}"/>
+  </view>
+ <view class='del'>
+  <image src="../../assets/goodsListImg/chacha.png" mode=""/>
+ </view>
+</view>
+<view class='addrRow'>
+  <view>
+    联系方式
+  </view>
+  <view>
+    <input class="weui-input" name="input" bindblur='getphone' value="{{phone}}"/>
+  </view>
+ <view class='del'>
+  <image src="../../assets/goodsListImg/chacha.png" mode=""/>
+ </view>
+</view>
+<view class='addrRow'>
+  <view>
+    所在地区
+  </view>
+  <view>
+    <input class="weui-input" name="input" bindblur='getarea' value="{{procince+'省'+city+'市'+area}}"/>
+  </view>
+ <view class='del'>
+  <image src="../../assets/goodsListImg/chacha.png" mode=""/>
+ </view>
+</view>
+<view class='addrRow'>
+  <view>
+    详细地址
+  </view>
+  <view>
+  <textarea value="{{detailed}}" bindblur='getdetail' style="max-width: 200px;" />
+  </view>
+ <view class='del'>
+  <image src="../../assets/goodsListImg/chacha.png" mode=""/>
+ </view>
+</view>
+<view class='addrbtns cfmbtn' bindtap="addAddrClick">确定</view>
+<view class='addrbtns delbtn' bindtap="deladdrClick">删除</view>

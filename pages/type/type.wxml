@@ -1,0 +1,8 @@
+<navSearch top="{{top}}" left="{{left}}" height="{{height}}" searchTop="{{searchTop}}" bind:searchEvent="acceptSearch"/>
+<view wx:if="{{ishow}}" style="color:black;font-size:25px;margin-top:10px;">
+  这里暂时没有数据哦
+</view>
+<scroll-view style="height:500px;width:100%;margin-top:10px;"  		bindscrolltolower="btmLoading" scroll-y='true' wx:if="{{!ishow}}">
+<goodsShowTab goodList="{{goodList}}" fclickEvent="{{jumptoDetil}}" bindtap='jumptoDetil' id="goodsShowTab"/>
+</scroll-view>
+

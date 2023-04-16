@@ -1,0 +1,24 @@
+<radio-group bindchange="setDefault">
+  <view class='addrList' wx:for="{{addrInfo}}" wx:key="*this">
+    <label for="">
+      <radio value="{{item.address_id}}" checked='{{item.default===1}}'/>
+    </label>
+    <view class='addrInfo'>
+      <view>
+    {{item.procince}}省{{item.city}}市{{item.area}}
+    </view>
+    <view class='userInfo'>
+      <view>
+        {{item.name}}
+      </view>
+      <view>
+        {{phone[index]}}
+      </view>
+    </view>
+    </view>
+    <image class='editaddr' src="../../assets/goodsListImg/bianji.png" mode="" bindtap="editAddrClick" data-address_id="{{item.address_id}}"/>
+  </view>
+</radio-group>
+<view class='addaddr' bindtap='addaddr'>
+  新增收货地址
+</view>

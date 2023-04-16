@@ -1,0 +1,96 @@
+.nav{
+  position: relative;
+}
+.search{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  /* margin-top:6px; */
+  margin-left:20px;
+}
+.searchInput{
+  margin-left:10px;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  font-size: 14px;
+  padding-left:30px;
+  box-sizing: border-box;
+}
+.goodsList{
+  width: 100%;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top:10px;
+  border-top:2px solid #F8F8F8;
+}
+.goodsRecomItems{
+width: 100%;
+height:50px;  
+text-align: center;
+line-height: 50px;
+}
+.goodsHotColumn{
+  width: 100%;
+  padding-left:10px;
+}
+.footPrintTitleRow,.hotTypeListTitleRow{
+  width: 100%;
+  position: relative;
+}
+.footPrintTitle{
+  font-size:15px;
+  font-weight: bold;
+}
+.clearPrint,.rankList{
+position: absolute;
+font-size: 14px;
+right:5px;
+top:0;
+}
+.clearPrint image,.rankList image{
+  width: 20px;
+  height: 20px;
+  right:30px;
+  position: absolute;
+  vertical-align: middle;
+}
+.rankList image{
+  right:45px;
+}
+.footPrintGoods{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color:black;
+  /* background-color: red; */
+}
+.hotTypeList{
+width: 100%;
+}
+.hotTypeItems{
+  width: 100%;
+  /* display: flex;
+  flex-flow: row;
+  justify-content:flex-start;
+  align-items: center; */
+}
+.hotTypeItems .sameType{
+display:inline-block;
+margin-left:10px ;
+margin-bottom: 10px;
+}
+.hotTypeItems image{
+width: 60px;
+height:60px;
+}
+.changeColor{
+  color:red;
+}
+.history{
+  margin-right:10px;
+}
+

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navSearch":"../../components/navSearch/navsearch",
+    "goodsShowTab":"../../components/goodsShowTab/goodsShowTab"
+  },
+  "navigationStyle": "custom"
+}

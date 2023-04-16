@@ -1,0 +1,48 @@
+/* pages/address/address.wxss */
+.addaddr{
+  position: fixed;
+  bottom:0;
+  left:0;
+  background-color: red;
+  color:#fff;
+  height:50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+.addrList,.userInfo{
+  padding: 10px;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.addrInfo{
+margin-right:40px;
+margin-left:10px ;
+}
+
+.addrInfo>view{
+  color:#9F9F9F;
+}
+.addrInfo>view:nth-of-type(1){
+  font-size: 20px;
+  font-weight: bold;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color:black;
+  letter-spacing: 1px;
+}
+.addrList image{
+width: 20px;
+height: 20px;
+}
+.userInfo{
+  padding: 0;
+}
+.userInfo>view{
+  margin-right: 10px;
+}

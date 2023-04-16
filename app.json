@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/type/type",
+    "pages/cart/cart",
+    "pages/order/order",
+    "pages/surprise/surprise",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/addaddress/addaddress",
+    "pages/orderlist/orderlist"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#9C9C9C",
+    "selectedColor": "EC273A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/tabBarImg/index.png",
+        "selectedIconPath": "./assets/tabBarImg/index-active.png"
+      },
+      {
+        "pagePath": "pages/type/type",
+        "text": "分类",
+        "iconPath": "./assets/tabBarImg/type.png",
+        "selectedIconPath": "./assets/tabBarImg/type_active.png"
+      },
+      {
+        "pagePath": "pages/surprise/surprise",
+        "text": "京喜",
+        "iconPath": "./assets/tabBarImg/surprise.png",
+        "selectedIconPath": "./assets/tabBarImg/surprise_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./assets/tabBarImg/cart.png",
+        "selectedIconPath": "./assets/tabBarImg/cart_active.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "登录",
+        "iconPath": "./assets/tabBarImg/login.png",
+        "selectedIconPath": "./assets/tabBarImg/login_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

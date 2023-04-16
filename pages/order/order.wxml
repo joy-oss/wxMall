@@ -1,0 +1,147 @@
+<view class='locationRow'>
+<view class='defLocation'>
+<view class='showDefault'>
+  <view class="def">
+    {{theDefault}}
+  </view>
+  <view class='userInfo'>
+    <view>
+      {{name}}
+    </view>
+    <view>
+      {{phone}}
+    </view>
+  </view>
+</view>
+</view>
+    <image  bindtap='editAddr' class='editAddr' src="../../assets/goodsListImg/you.png" mode=""/>
+</view>
+<view class='bboder'>
+  <view>  
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+  <view>
+    
+  </view>
+</view>
+<view class='orderlist'>
+  <view wx:for="{{orderInfo}}" wx:key="*this" class='orderInfo'>
+    <image src="{{item.img}}" mode=""/>
+    <view class='orderDetil'>
+      <view class='goodsname'>
+        {{item.good_name}}
+      </view>
+      <view class='goodsku' wx:if="{{sku[index]}}">
+    <view wx:for="{{sku[index]}}" wx:key='*this'>
+      {{item}}
+    </view>
+    </view>
+    <view class='goodsprice'>
+  <view class='goodspriceitem'>
+    <view class='pricelog'>￥</view>
+        <view>
+          {{item.price}}
+        </view>
+  </view>
+        <view class='goodsnum'>
+          ×{{item.num}}
+      </view>
+      </view>
+      <view class='server'>
+        支持7天无理由退货
+      </view>
+    </view>
+  </view>
+</view>
+<view class='packageInfo'>
+  <view>
+    配送
+  </view>
+  <view class='expressage'>
+    <view>
+      京东快递
+    </view>
+    <view>
+      {{times}}
+    </view>
+  </view>
+</view>
+<view class='payInfo'>
+  <view class='allmoney row'>
+    <view>
+      商品金额
+    </view>
+    <view>
+      ￥{{money}}
+    </view>
+  </view>
+<view class='freight row'>
+  <view>
+    运费
+  </view>
+  <view>
+    ￥0.00
+  </view>
+</view>
+<view class='discount1 row'>
+  <view>
+   立减
+  </view>
+  <view>
+    ￥0.00
+  </view>
+</view>
+<view class='discount2 row'>
+  <view>
+   优惠券
+  </view>
+  <view class='nouse'>
+    无可用
+  </view>
+</view>
+</view>
+<view>
+</view>
+<image class='bar' src="../../assets/goodsListImg/bar.png" alt=""/>
+<view class='pay'>
+<view class='endPrice'>
+<view>
+  ￥
+</view>
+<view>
+  {{money}}
+</view>
+  </view>
+  <view class="mypay" bindtap='jumpOdList'>
+    自己付
+  </view>
+</view>

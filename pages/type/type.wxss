@@ -1,0 +1,29 @@
+/* pages/type/type.wxss */
+.goodsList{
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.goodsItemImg{
+  width: 100px;
+  height: 100px;
+  padding:10px;
+}
+.goodsItemImg image{
+  width: 100%;
+  height:100%;
+}
+.goodsListItemName{
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+}
+.goodsListItemPrice{
+  color:#E75F7E;
+  font-size: 15px;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navSearch":"../../components/navSearch/navsearch"
+  },
+  "navigationStyle": "custom"
+}

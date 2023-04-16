@@ -1,0 +1,1 @@
+export const baseUrl='http://api_devs.wanxikeji.cn/'

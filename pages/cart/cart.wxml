@@ -1,0 +1,75 @@
+<view class='locationRow'>
+<view class='defLocation'>
+<view class='showDefault'>
+  <image src="../../assets/goodsListImg/ditu_dingwei.png" mode=""/>
+  <view class="def">
+    <!-- {{theDefault}} -->
+    {{ifdefault===false?address:theDefault}}
+  </view>
+</view>
+</view>
+  <view bindtap='editaddr' class='editAddr'>
+    编辑地址
+  </view>
+</view>
+<view class='cartList'>
+  <checkbox-group bindchange="radioClick">
+  <view class='cartItem' wx:for="{{carts}}" wx:key='*this'>
+<!-- <view class='goodsstore'>
+  <label class="radio1">
+      <checkbox value="{{index}}" checked="{{checkall}}"/>
+      {{item.shopping_car_id}}
+    </label>
+</view> -->
+    <view class='goodsCon'>
+      <label class="radio">
+      <checkbox value="{{index}}" checked="{{checkall}}"/>
+    </label> 
+      <image src="{{item.img}}" mode=""/>
+      <view class='goodsInfo'>
+        <view class='cartname'>
+          {{item.good_name}}
+        </view>
+        <view class='sku'>
+<view wx:for="{{sku[index]}}" wx:key="index"  wx:if="{{sku[index]}}" data-index="{{index}}">
+  {{item}}
+</view>
+        </view>
+        <view class='priceRow'>
+          <view>
+           ￥{{item.price}}
+          </view>
+<view class='counter'>
+  <view bindtap='decre' data-index="{{index}}" data-item="{{item}}">
+    -
+  </view>
+  <view>
+   {{num[index]<0?1:num[index]}}
+  </view>
+  <view bindtap='incre' data-index="{{index}}" data-item="{{item}}">
+    +
+  </view>
+</view>
+<view class='delcart' data-index="{{index}}" bindtap="delCartItem" >
+      删除
+    </view>
+      </view>
+      </view>
+    </view>
+  </view>
+</checkbox-group>
+</view>
+<view class='countall'>
+    <label for="">
+      <checkbox value="" bindtap='checkall' checked="{{checkitem}}"/>全选
+    </label>
+  <view class='account'>
+    <view>
+      总计：{{money}}元
+    </view>
+    <view class='accountbtn' bindtap='jumpTOrder'>去结算({{count}}件)</view>
+  </view>
+</view>
+<view style="height:100px">
+  
+</view>

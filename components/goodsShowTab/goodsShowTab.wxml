@@ -1,0 +1,26 @@
+<view class='goodsList' wx:for="{{goodList}}" wx:key="index" id="{{item.good_id}}" bindtap='jumpToDetil' wx:if="{{item.good_id}}"> 
+    <view class='goodsItemImg'>
+      <image src="{{item.img}}" mode=""/>
+    </view>
+    <view class='goodsItemInfo'>
+      <view class='goodsListItemName'>
+        {{item.good_name}}
+      </view>
+      <view class='goodsListItemPrice'>
+        ￥{{item.price}}
+      </view>
+    </view>
+  </view>
+  <view class='goodsList' wx:for="{{goodList}}" wx:key="index" id="{{item.good_type_id}}" bindtap='jumpToDetil' wx:if='{{item.good_type_id}}'> 
+    <view class='goodsItemImg'>
+      <image src="{{item.pic}}" mode=""/>
+    </view>
+    <view class='goodsItemInfo'>
+      <view class='goodsListItemName'>
+        {{item.type_name}}
+      </view>
+      <view class='goodsListItemPrice'>
+        {{item.create_time}}
+      </view>
+    </view>
+  </view>

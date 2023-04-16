@@ -1,0 +1,40 @@
+.searchNav{
+  width:100%;
+  text-align:center;
+  border-bottom:solid 2px #F7F7F7;
+  padding-bottom:10px;
+}
+.searchHistory{
+  width: 100%;
+}
+.shTitle{
+  position: relative;
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 5px;
+}
+.shTitle>view{
+  margin-top:25px;
+  color:#CCCCCC;
+  margin-left:20px;
+}
+.shTitle image{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right:10px;
+  top:0;
+}
+.shCon{
+  display:flex;
+  padding-top:10px;
+  padding-left:10px;
+}
+.shCon view{
+border:solid 1px #cccccc;
+padding:5px 10px;
+color:000000;
+font-size:14px;
+border-radius: 10px;
+margin-right:10px ;
+}
+

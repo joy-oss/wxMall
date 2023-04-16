@@ -1,0 +1,50 @@
+<navSearch top="{{top}}" left="{{left}}" height="{{height}}" searchTop="{{searchTop}}" bind:searchEvent="acceptSearch"/>
+<view class="goodsList">
+  <!-- scroll-into-view="id{{rightCurrScrollId}}" -->
+  <scroll-view class='goodsRecom' style="height:1000px;width:100px;background-color: #F8F8F8;" scroll-y='true' scroll-top="{{recScrollTop}}" scroll-with-animation="3000">
+    <view wx:for="{{goodsRecom}}" wx:key="index" class="'goodsRecomItems',{{recomClickId===index?'changeColor':''}}" data-flag="{{index}}" bindtap='recomClick' >
+      {{item}}
+    </view>
+    <!-- id="id{{index}}"  -->
+  </scroll-view>
+<view class='goodsHotColumn'>
+<view class='footPrint'>
+<view class='footPrintTitleRow'>
+  <view class='footPrintTitle' bindtap='viewHistory'>
+  浏览足迹
+</view>
+<view class='clearPrint'>
+  清空
+     <image src="../../assets/goodsListImg/clear.png" mode=""/>    
+</view>
+</view>
+<view class="footPrintGoods">
+  <view wx:for="{{footPrintNew}}" wx:key='*this' class='history'> 
+    <text>{{item}}</text>
+  </view>
+</view>
+</view>
+<view class='hotTypeList'>
+  <view class='hotTypeListTitleRow'>
+    <view class="hotTypeListTitle">
+      热门分类
+    </view>
+    <view class='rankList'>
+      排行榜
+      <image src="../../assets/goodsListImg/ranklist.png" mode=""/>
+    </view>
+  </view>
+  <!-- 渲染每个一级元素的子元素 -->
+<scroll-view style='height: 800px; width:100%' scroll-y="true" 	scroll-into-view="id{{leftright}}" scroll-with-animation='3000' 	bindscroll='rightleftScroll'>
+  <view class='hotTypeItems' wx:for="{{goodsRecomData}}" wx:key='index' id="id{{index}}">
+<view wx:for='{{item.children}}' wx:key='*this' class='sameType' data-good_type="{{item.good_type_id}}" bindtap='typeclickjump'>
+  <image src="{{item.pic}}" mode=""/>
+    <view>
+      {{item.type_name}}
+    </view>
+</view>
+  </view>
+</scroll-view>
+</view>
+</view>
+</view>

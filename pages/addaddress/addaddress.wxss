@@ -1,0 +1,37 @@
+.addrRow{
+  position: relative;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  width: 100%;
+  padding:10px;
+}
+.addrRow>view:nth-of-type(1){
+margin-right:10px;
+}
+.addrRow>view:nth-of-type(2){
+  width:70%;
+}
+.addrRow image{
+position:absolute;
+right:30px;
+top:10px;
+width: 20px;
+height: 20px;
+}
+.addrbtns{
+  width: 80%;
+  margin:10px 20px;
+  border-radius:20px ;
+  padding:5px 10px;
+  text-align: center;
+}
+.cfmbtn{
+  background-color: #F94D20;
+  color:#F6E5DA;
+  font-weight: lighter;  
+}
+.delbtn{
+border:solid 1px #F94D20;
+color:#F94D20;
+background-color: #fff;
+}

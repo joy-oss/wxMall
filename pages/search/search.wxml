@@ -1,0 +1,14 @@
+<navSearch top="{{top}}" left="{{left}}" height="{{height}}" searchTop="{{searchTop}}" bind:searchEvent="acceptSearch"/>
+<view class='searchHistory'>
+<view class='shTitle'>
+  <view>
+  历史搜索
+</view>
+<image src="../../assets/goodsListImg/clear.png" mode=""/>
+</view>
+<view class='shCon'>
+  <view wx:for="{{showFootview}}" wx:key='*this'>
+    {{item}}
+  </view>
+</view>
+</view>

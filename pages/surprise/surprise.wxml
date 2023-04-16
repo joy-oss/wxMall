@@ -1,0 +1,115 @@
+<!-- 实现sku的方法：
+1.重新构建请求返回的数据结构[key:''
+value:[{key:'',value:[{}]}]]
+2.通过事件冒泡bind:tap获取父子组件的不同数据
+3.构建对应的数据节构传入选择的数据 -->
+<view class='backup' bindtap='jumpback'>
+  <image src="../../assets/goodsListImg/backup.png" mode=""/>
+</view>
+<view class='goodsDetil'>
+  <image src="{{goodsDetilData.img}}" mode=""/>
+  <view class='goodsDetilPrice'>
+    <view>
+      ￥{{goodsDetilData.price}}
+    </view>
+  </view>
+  <view class="goodsDetilName">
+    {{goodsDetilData.good_name}}
+  </view>
+</view>
+<view class='discount'>
+  <view class='discountTitle'>
+    优惠
+  </view>
+  <view class='disCountDetil'>
+    <view class='freeRow'>
+      <view class='free'>
+        免费领
+      </view>
+    <view>
+      体验卡免费领，超大流量任性用
+    </view>
+    </view>
+    <view class='freeRow'>
+      <view class='free'>
+        优惠套装
+      </view>
+      <view>
+        该商品共有7款优惠
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  评论区
+</view>
+<view class='funBtns'>
+<view class='goCart'  bindtap='jumpToCart'>
+  <image src="../../assets/tabBarImg/cart.png" mode=""/>
+  <view>
+    购物车
+  </view>
+</view>
+<button class='btns addCart' bindtap="showSku">加入购物车</button>
+<button class='btns buy' bindtap="showSku">立即购买</button>
+</view>
+<page-container show="{{showSkub}}">
+<view class='popup'>
+  <view class='skuImgRow'>
+  <image src="{{goodsDetilData.img}}" mode=""/>
+  <view class='skuSelected'>
+    <view class='skuSelectPrice'>
+    ￥{{goodsDetilData.price}}
+    </view>
+    <view class='skuSelectCon'>
+      <view class='sltt'>
+      已选
+      </view>
+  <view wx:for="{{selected}}" wx:key='index'>
+  {{item}}
+</view>
+    </view>
+  </view>
+</view>
+<view class="skuTypeCon">
+ <view wx:for='{{skuInfo.sku_column}}' wx:key="*this" wx:for-index='fkey' wx:for-item='fitem'>
+ <view data-key='{{fitem.key}}' bindtap="clickf">
+ <view class='skuConKey'>
+  {{fitem.key}}
+ </view>
+<!-- 通过事件冒泡触发父组件 通过不同的参数确定点击按钮的位置 -->
+<view class='skuCon'>
+  <view wx:for="{{skuInfo.sku_column[fkey].value}}" wx:key="index" data-key="{{index}}" class="'skuConValue',{{(rowflag===item.key)&&(cloflag===index)?'changeColor':''}}" bind:tap="clicks" data-value="{{item.value}}">
+     {{item.value}} 
+   </view>
+</view>
+ </view>
+ </view>
+</view>
+<view class='counter'>
+  <view>
+    数量
+  </view>
+<view class='count'>
+  <view bindtap='decre'>
+    -
+  </view>
+  <view>
+   {{count<0?1:count}}
+  </view>
+  <view bindtap='incre'>
+    +
+  </view>
+</view>
+</view>
+<view class='addCartBtns'>
+  <view class='addCart' bindtap='addCartClick' bindtap="hiddenSku">
+    加入购物车
+  </view>
+  <view class='buy' bindtap='buyClick'>
+    立即购买
+  </view>
+</view>
+</view>
+</page-container>
+
